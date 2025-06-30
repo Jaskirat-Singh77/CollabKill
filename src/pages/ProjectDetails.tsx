@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useProject } from '../contexts/ProjectContext';
 import { useAuth } from '../contexts/AuthContext';
+import AIAssistantButton from '../components/AIAssistantButton';
 import { 
   ArrowLeft, 
   Users, 
@@ -466,6 +467,9 @@ const ProjectDetails = () => {
           )}
         </motion.div>
       </main>
+
+      {/* AI Assistant Button */}
+      <AIAssistantButton context="project" projectData={project} />
     </div>
   );
 };
